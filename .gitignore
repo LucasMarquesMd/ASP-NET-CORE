@@ -1,0 +1,12 @@
+    # Visual Studio specific files
+    .vs/
+    *.suo
+    *.user
+    *.log
+
+    # Build artifacts
+    bin/
+    obj/
+
+    # Package files
+    packages/
