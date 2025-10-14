@@ -19,3 +19,15 @@ Content-Type: application/json
     "TitulosBrasileiros" : 0,
     "TitulosMundiais" : 10
 }
+
+
+###
+PUT http://localhost:5028/times/3
+Content-Type: application/json
+
+{
+    "Nome" : "Curintia",
+    "Cidade" : "Sampa",
+    "TitulosBrasileiros" : 99,
+    "TitulosMundiais" : 999
+}
