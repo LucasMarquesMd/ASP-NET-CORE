@@ -3,3 +3,6 @@ GET http://localhost:5028/usuarios
 ###
 POST http://localhost:5028/usuarios?nome=Lucas
 
+###
+GET http://localhost:5028/times
+

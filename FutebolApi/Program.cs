@@ -11,6 +11,17 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(conn
 
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello, World!");
+// GET all
+app.MapGet("/times", async (AppDbContext db) =>
+{
+    return await db.Times.ToListAsync();
+});
+
+// GET por ID
+app.MapGet("/times/{id}", async (int id, AppDbContext db) =>
+{
+    var time = await db.Times.FindAsync(id);
+    return time is not null ? Results.Ok(time) : Results.NotFound("Time não encontrado!");
+});
 
 app.Run();
