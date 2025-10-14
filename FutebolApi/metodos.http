@@ -6,3 +6,16 @@ POST http://localhost:5028/usuarios?nome=Lucas
 ###
 GET http://localhost:5028/times
 
+###
+GET http://localhost:5028/times/2
+
+###
+POST http://localhost:5028/times/
+Content-Type: application/json
+
+{
+    "Nome" : "Real Madrid",
+    "Cidade" : "Madrid",
+    "TitulosBrasileiros" : 0,
+    "TitulosMundiais" : 10
+}
