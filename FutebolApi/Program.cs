@@ -3,6 +3,14 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+    });
+});
+
 // Pega a string de conexão do appsettings.json
 var connectionString = builder.Configuration.GetConnectionString("Futebol");
 // Adiciona os serviços do Entity Framework e configura o DbContext
@@ -13,6 +21,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseCors();
 
 // garante que esteja em ambiente de desenvolvimento
 if (app.Environment.IsDevelopment())
