@@ -1,9 +1,31 @@
-const fetchAPI = fetch('http://localhost:5028/times', {
-    method: 'GET',
-    headers:{
-        'Content-Type': 'application/json'
+const listaTimes = document.getElementById('times-lista');
+const apiUrl = 'http://localhost:5028/times';
+
+const getTimes = async () => {
+    try {
+        const response = await fetch(apiUrl,
+            {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+        if (!response.ok) {
+            throw new Error("Erro ao buscar os times!");
+        }
+
+        const times = await response.json();
+
+        times.forEach((time) => {
+            const newLi = document.createElement('li');
+            newLi.innerText = `Nome: ${time.nome}`;
+            listaTimes.appendChild(newLi);
+        });
+
+    } catch (error) {
+        listaTimes.innerText = `${error.message}`;
     }
-    
-})
-.then((res) => res.json())
-.then((data) => console.log(data));
+}
+
+getTimes();
