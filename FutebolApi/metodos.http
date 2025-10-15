@@ -1,6 +1,3 @@
-GET http://localhost:5028/usuarios
-
-###
 POST http://localhost:5028/usuarios?nome=Lucas
 
 ###
@@ -31,3 +28,6 @@ Content-Type: application/json
     "TitulosBrasileiros" : 99,
     "TitulosMundiais" : 999
 }
+
+###
+DELETE  http://localhost:5028/times/2

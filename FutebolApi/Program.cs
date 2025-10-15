@@ -47,5 +47,14 @@ app.MapPut("/times/{id}", async (int id, AppDbContext db, Time timeAtualizado) =
     return Results.Ok(time);
 });
 
+// DELETE - mandar para a glória
+app.MapDelete("/times/{id}", async (int id, AppDbContext db) =>
+{
+    var time = await db.Times.FindAsync(id);
+    if (time is null) return Results.NotFound("Time não encontrado!");
 
+    db.Times.Remove(time);
+    await db.SaveChangesAsync();
+    return Results.NoContent();
+});
 app.Run();
