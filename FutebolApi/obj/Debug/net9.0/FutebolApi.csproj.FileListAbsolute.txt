@@ -71,3 +71,8 @@ D:\Documents\07-Estudos\10 - Programação\APS_Net_Core\Projeto\ASP-NET-CORE\Fut
 D:\Documents\07-Estudos\10 - Programação\APS_Net_Core\Projeto\ASP-NET-CORE\FutebolApi\bin\Debug\net9.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 D:\Documents\07-Estudos\10 - Programação\APS_Net_Core\Projeto\ASP-NET-CORE\FutebolApi\obj\Debug\net9.0\FutebolApi.csproj.AssemblyReference.cache
 D:\Documents\07-Estudos\10 - Programação\APS_Net_Core\Projeto\ASP-NET-CORE\FutebolApi\obj\Debug\net9.0\FutebolApi.csproj.Up2Date
+D:\Documents\07-Estudos\10 - Programação\APS_Net_Core\Projeto\ASP-NET-CORE\FutebolApi\bin\Debug\net9.0\Microsoft.OpenApi.dll
+D:\Documents\07-Estudos\10 - Programação\APS_Net_Core\Projeto\ASP-NET-CORE\FutebolApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Documents\07-Estudos\10 - Programação\APS_Net_Core\Projeto\ASP-NET-CORE\FutebolApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Documents\07-Estudos\10 - Programação\APS_Net_Core\Projeto\ASP-NET-CORE\FutebolApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Documents\07-Estudos\10 - Programação\APS_Net_Core\Projeto\ASP-NET-CORE\FutebolApi\obj\Debug\net9.0\FutebolApi.MvcApplicationPartsAssemblyInfo.cs

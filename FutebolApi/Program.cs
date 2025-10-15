@@ -5,11 +5,21 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Pega a string de conexão do appsettings.json
 var connectionString = builder.Configuration.GetConnectionString("Futebol");
-
 // Adiciona os serviços do Entity Framework e configura o DbContext
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
 
+// Explorador de endpoints (SWAGGER)
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
+
+// garante que esteja em ambiente de desenvolvimento
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(); // Interface de usuário
+}
 
 // GET all
 app.MapGet("/times", async (AppDbContext db) =>
